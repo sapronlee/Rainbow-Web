@@ -1,0 +1,11 @@
+zh-CN:
+  breadcrumbs:
+    application:
+      index: 'Rainbow'
+    home:
+      index: '首页'
+    stylesheets:
+      root: 'Stylesheets'
+      layout: '布局'
+      grid: '网格'
+      button: '按钮'

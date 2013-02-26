@@ -1,0 +1,43 @@
+<ul id="sidebar-nav">
+  
+  <li class="accordion-group <%= "#{active_li?(controllers: %w(home), value: 'active')}" %>">
+    <a href="<%= root_path %>">
+      <span class="icon"><i class="icon-dashboard"></i></span>
+      <span class="text"><span class="title">Dashboard</span></span>
+    </a>
+  </li>
+  
+  <li class="accordion-group <%= "#{active_li?(controllers: %w(stylesheets), value: 'active')}" %>">
+    <a data-toggle="collapse" data-parent="#sidebar-nav" href="#stylesheets">
+      <span class="icon"><i class="icon-magic"></i></span>
+      <span class="text"><span class="title">Stylesheets</span><b class="caret"></b></span>
+    </a>
+    <div id="stylesheets" class="collapse <%= "#{active_li?(controllers: %w(stylesheets), value: 'in')}" %>">
+      <ul>
+        
+        <li class="<%= "#{active_li?(controllers: %w(stylesheets), actions: %w(layout), value: 'active')}" %>">
+          <a href="<%= layout_stylesheets_path %>">
+            <span class="icon"><i class="icon-circle"></i></span>
+            <span class="text"><%= t('breadcrumbs.stylesheets.layout') %></span>
+          </a>
+        </li>
+        
+        <li class="<%= "#{active_li?(controllers: %w(stylesheets), actions: %w(grid), value: 'active')}" %>">
+          <a href="<%= grid_stylesheets_path %>">
+            <span class="icon"><i class="icon-circle"></i></span>
+            <span class="text"><%= t('breadcrumbs.stylesheets.grid') %></span>
+          </a>
+        </li>
+        
+        <li class="<%= "#{active_li?(controllers: %w(stylesheets), actions: %w(button), value: 'active')}" %>">
+          <a href="<%= button_stylesheets_path %>">
+            <span class="icon"><i class="icon-circle"></i></span>
+            <span class="text"><%= t('breadcrumbs.stylesheets.button') %></span>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </li>
+  
+</ul>

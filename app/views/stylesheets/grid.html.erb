@@ -1,0 +1,131 @@
+<div class="container-fluid">
+  
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="box bordered">
+        
+        <div class="box-header">
+          <i class="icon-th"></i>
+          <span class="title">默认栅格系统</span>
+          <div class="pull-right">
+            <div class="btn-group">
+              <a href="#" data-toggle="shrink"><i class="icon-caret-up"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="box-content row-fluid">
+          <div class="span12">
+            <div class="padded20">
+              <p>
+                Bootstrap默认的栅格系统为 <code>12</code> 列 ，形成一个 <code>940px</code> 宽的容器，默认没有启用 响应式布局特性 。如果加入响应式布局CSS文件，栅格系统会自动根据可视窗口的宽度从 <code>724px</code> 到 <code>1170px</code> 进行动态调整。在可视窗口低于 <code>767px</code> 宽的情况下，列将不再固定并且会在垂直方向堆叠。
+              </p>
+              <div class="page-header">
+                <h2>默认栅格系统示例</h2>
+              </div>
+              <div class="row-fluid grids">
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 box dark-blue">1</div>
+              </div>
+              <div class="row-fluid grids">
+                <div class="span2 box medium-blue">2</div>
+                <div class="span2 box medium-blue">2</div>
+                <div class="span2 box medium-blue">2</div>
+                <div class="span2 box medium-blue">2</div>
+                <div class="span2 box medium-blue">2</div>
+                <div class="span2 box medium-blue">2</div>
+              </div>
+              <div class="row-fluid grids">
+                <div class="span4 box border-blue">4</div>
+                <div class="span3 box border-blue">3</div>
+                <div class="span3 box border-blue">3</div>
+                <div class="span2 box border-blue">2</div>
+              </div>
+              <div class="row-fluid grids">
+                <div class="span6 box text-blue">6</div>
+                <div class="span6 box text-blue">6</div>
+              </div>
+              <div class="row-fluid grids">
+                <div class="span12 box dark-blue">12</div>
+              </div>
+              <h4>默认栅格系统的HTML代码</h4>
+              <p>对于简单的两列式布局，创建一个 <code>.row</code> 容器，并在容器中加入合适数量的 <code>.span*</code>  列即可。由于默认是 <code>12</code> 列的栅格，所有 <code>.span*</code> 列所跨越的栅格数之和最多是 <code>12</code> (或者等于其父容器的栅格数)。</p>
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span6"&gt;...&lt;/div&gt;
+  &lt;div class="span6"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+              <p>上面的代码展示了 <code>.span6</code> 和 <code>.span6</code> 两列，两列的和总共是 <code>12</code> 个栅格。</p>
+              <div class="page-header">
+                <h2>默认栅格偏移列</h2>
+              </div>
+              <p>把列向右移动可使用 <code>.offset*</code> 类。每个类都给列的左边距增加了指定单位的列。例如，<code>.offset4</code> 将 <code>.span4</code> 右移了 <code>4</code> 个列的宽度。</p>
+              <div class="row-fluid grids">
+                <div class="span1 box dark-blue">1</div>
+                <div class="span1 offset1 box dark-blue">1</div>
+                <div class="span1 offset1 box dark-blue">1</div>
+                <div class="span1 offset1 box dark-blue">1</div>
+                <div class="span1 offset1 box dark-blue">1</div>
+                <div class="span1 offset1 box dark-blue">1</div>
+              </div>
+              <div class="row-fluid grids">
+                <div class="span1 box medium-blue">1</div>
+                <div class="span2 offset2 box medium-blue">2</div>
+                <div class="span4 offset3 box medium-blue">4</div>
+              </div>
+              <div class="row-fluid grids">
+                <div class="span4 box border-blue">1</div>
+                <div class="span3 offset4 box border-blue">3</div>
+              </div>
+              <h4>默认栅格偏移列的HTML代码</h4>
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span4"&gt;...&lt;/div&gt;
+  &lt;div class="span3 offset4"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+              <div class="page-header">
+                <h2>默认栅格嵌套列</h2>
+              </div>
+              <p>在默认的栅格系统里, 在已有的 <code>.span*</code> 内添加一个新的 <code>.row</code> 并加入 <code>.span*</code>  列，就可实现嵌套。被嵌套列中的每列列数总和要等于父级列。</p>
+              <div class="row-fluid grids">
+                <div class="span12 box medium-blue">
+                  Span12
+                  <div class="row-fluid">
+                    <div class="span4 box dark-blue">Span4</div>
+                    <div class="span6 offset2 box dark-blue">Span6</div>
+                  </div>
+                </div>
+              </div>
+              <h4>默认栅格嵌套列的HTML代码</h4>
+<pre class="prettyprint linenums">
+&lt;div class="row"&gt;
+  &lt;div class="span12"&gt;
+    Span12
+    &lt;div class="row"&gt;
+      &lt;div class="span4"&gt;Span4&lt;/div&gt;
+      &lt;div class="span6 offset2"&gt;Span6&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
