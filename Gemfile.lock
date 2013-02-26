@@ -1,8 +1,7 @@
-GIT
-  remote: git://github.com/sapronlee/bootstrap_rainbow.git
-  revision: 7101be3f14aa76cf9c86d5e97c1ce37473ee66cc
+PATH
+  remote: /Users/chucklee/Developments/Web/Gems
   specs:
-    bootstrap_rainbow (0.0.1)
+    bootstrap_rainbow (0.0.2)
       bootstrap-sass (~> 2.3.0.0)
       font-awesome-sass-rails (~> 3.0.2.1)
       railties (>= 3.1.1)
